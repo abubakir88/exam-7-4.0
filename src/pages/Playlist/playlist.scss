@@ -86,8 +86,22 @@
       tbody {
         tr {
           color: #fff;
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            img {
+              width: 40px;
+              height: 40px;
+              padding-top: 10px;
+            }
+          }
           td {
             text-align: center;
+            .artist_name {
+              display: flex;
+              flex-direction: column;
+            }
           }
         }
       }

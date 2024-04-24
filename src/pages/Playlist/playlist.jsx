@@ -43,7 +43,7 @@ const Details = () => {
       }
     };
     fetchData();
-  }, [api, apiUrl, id]);
+  }, [api, apiUrl, data, id]);
 
   return (
     <div className="playlist-content">
@@ -104,8 +104,9 @@ const Details = () => {
                         <tr className="playlist" key={i}>
                           {/* {console.log(items)} */}
                           <th>{i + 1}</th>
-                          <td>
+                          <td className="name">
                             <img src={items.track.album.images[2].url} alt="" />
+                            <span>{items.track.artists[0].name}</span>
                           </td>
                           <td>{items.track.name}</td>
                           <td>
