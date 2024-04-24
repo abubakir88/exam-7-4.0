@@ -1,5 +1,5 @@
 .playlist-content {
-  margin-left: 320px;
+  margin-left: 310px;
   width: 590px;
   min-width: 100%;
   .playlist-top {
@@ -53,6 +53,7 @@
           width: 52px;
           height: 52px;
           color: #65d36e;
+          cursor: pointer;
         }
         .FcLike,
         .CiSaveDown1,
@@ -60,6 +61,7 @@
           width: 32px;
           height: 32px;
           color: #fff;
+          cursor: pointer;
         }
       }
       .search {
@@ -71,6 +73,7 @@
         .IoIosArrowDown {
           width: 24px;
           height: 26px;
+          cursor: pointer;
         }
       }
     }
@@ -90,9 +93,16 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            span {
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+                padding-top: 4px;
+              }
+            }
             img {
-              width: 40px;
-              height: 40px;
+              width: 42px;
+              height: 42px;
               padding-top: 10px;
             }
           }

@@ -21,7 +21,7 @@ const Your_top_mixes = () => {
     };
     fetchData();
   }, []);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>

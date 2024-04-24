@@ -21,8 +21,8 @@ const Details = () => {
   const apiUrl = api.toString().split("?type=")[1];
   const token = "https://accounts.spotify.com/api/token";
 
-  const [data, setData] = useState(null);
-  const [album, setAlbum] = useState(null);
+  const [data, setData] = useState([]);
+  const [album, setAlbum] = useState([]);
 
   // const timeInMilliseconds = data.;
 
@@ -34,9 +34,9 @@ const Details = () => {
         const album = await getPlaylists(
           "https://api.spotify.com/v1/playlists/37i9dQZF1DWWY64wDtewQt/tracks"
         );
-        console.log(album);
+        // console.log(album);
         setData(playlists?.playlists.items);
-        console.log(data);
+        // console.log(data);
         setAlbum(album);
       } catch (error) {
         console.log(error);

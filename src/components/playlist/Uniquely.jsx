@@ -21,7 +21,7 @@ const Uniquelyplay = () => {
     };
     fetchData();
   }, []);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
