@@ -19,24 +19,27 @@ const Details = () => {
   const { id } = useParams();
   const api = window.location.href;
   const apiUrl = api.toString().split("?type=")[1];
-  const tokenURl = "https://accounts.spotify.com/api/token";
+  const token = "https://accounts.spotify.com/api/token";
 
   const [data, setData] = useState(null);
   const [album, setAlbum] = useState(null);
 
+  // const timeInMilliseconds = data.;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await getToken(tokenURl);
+        await getToken(token);
         const playlists = await getPlaylists(All);
         const album = await getPlaylists(
           "https://api.spotify.com/v1/playlists/37i9dQZF1DWWY64wDtewQt/tracks"
         );
         console.log(album);
         setData(playlists?.playlists.items);
+        console.log(data);
         setAlbum(album);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.log(error);
       }
     };
     fetchData();
@@ -46,7 +49,6 @@ const Details = () => {
     <div className="playlist-content">
       <div>
         {data?.map((el, i) => {
-          // console.log(el);
           if (el?.id === id) {
             return (
               <div key={i}>
@@ -100,17 +102,18 @@ const Details = () => {
                     <tbody>
                       {album.items.slice(0, 20).map((items, i) => (
                         <tr className="playlist" key={i}>
+                          {/* {console.log(items)} */}
                           <th>{i + 1}</th>
                           <td>
                             <img src={items.track.album.images[2].url} alt="" />
                           </td>
+                          <td>{items.track.name}</td>
                           <td>
                             <audio
                               controls
                               src={items.track.preview_url}
                             ></audio>
                           </td>
-                          <td>@mdo</td>
                           <td>time</td>
                         </tr>
                       ))}
