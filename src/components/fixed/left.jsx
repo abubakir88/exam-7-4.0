@@ -1,5 +1,7 @@
 import "./left.scss";
 import { Link } from "react-router-dom";
+import like from "/like.png";
+
 import { IoMdHome } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { LuLibrary } from "react-icons/lu";
@@ -29,7 +31,7 @@ const Left = () => {
             <h3>Create Playlist</h3>
           </div>
           <Link to="like" className="like">
-            <FcLike className="FcLike" />
+            <img src={like} alt="" />
             <h3>Liked Songs</h3>
           </Link>
           <hr className="hr" />

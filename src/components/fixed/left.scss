@@ -77,12 +77,12 @@
         align-items: center;
         gap: 23px;
         cursor: pointer;
-        .FcLike {
-          width: 22px;
-          height: 25px;
+        img {
+          width: 36px;
+          height: 36px;
           border-radius: 2px;
-          padding: 4px 6px;
-          background: linear-gradient(133.58deg, #3822ea 3.13%, #c7e9d7 97.71%);
+          // padding: 4px 6px;
+          // background: linear-gradient(133.58deg, #3822ea 3.13%, #c7e9d7 97.71%);
         }
         h3 {
           color: #fff;
